@@ -17,7 +17,7 @@ classdef ToleranceMath
         end
         function tf = eq(obj1,obj2)
             if abs(obj1.Value - obj2.Value)...
-                    <= min([obj1.eps, obj2.eps])
+                    <= max([obj1.eps, obj2.eps])
                 tf = true;
             else
                 tf = false;
